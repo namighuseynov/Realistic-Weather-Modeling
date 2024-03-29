@@ -257,11 +257,11 @@ MonoBehaviour:
   sun: {fileID: 2101602457}
   timeManager: {fileID: 933212633}
   SunriseTime:
-    Hour: 6
+    Hour: 8
     Minute: 30
     Seconds: 0
   SunsetTime:
-    Hour: 19
+    Hour: 14
     Minute: 0
     Seconds: 0
 --- !u!114 &933212633
