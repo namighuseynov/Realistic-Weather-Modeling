@@ -14,37 +14,39 @@ namespace RealisticWeatherModeling
             [SerializeField] private Transform _sun;
             [SerializeField] private bool _timeFlowing;
             public AnimationCurve curve;
-            public Clock Clock { get; private set; }
+            public Clock Clock { get { return _clock; } private set { } }
             public float TimeScale { get { return _timeScale; } private set { } }
+
             public override void Begin()
             {
-                base.Begin();
-            }
-            public override void End() 
-            { 
-                base.End();
+                _clock = new Clock(0, 0, 0);
             }
 
-            private void FixedUpdate()
+            private void Update()
             {
                 float deltaTime = UnityEngine.Time.deltaTime * TimeScale;
                 if (_timeFlowing)
                 {
                     _clock.Update(deltaTime);
-                    DayUpdate();
+                    //DayUpdate();
                 }
             }
 
-            private void DayUpdate()
-            {
-                float time = _clock.Hour + ((_clock.Minute * 5.0f / 3.0f) / 100.0f);
-                if (time < 6.5) time += 24;
-                float value = time / 30.5f;
-                float solarEulerAngle = curve.Evaluate(value) * 360.0f;
-                Quaternion rot = Quaternion.Euler(new Vector3(solarEulerAngle, 0, 0));
-                _sun.rotation = rot;
-                Debug.Log(solarEulerAngle);
-            }
+            //private void Start()
+            //{
+            //    instance = this;
+            //}
+
+            //private void DayUpdate()
+            //{
+            //    float time = _clock.Hour + ((_clock.Minute * 5.0f / 3.0f) / 100.0f);
+            //    if (time < 6.5) time += 24;
+            //    float value = time / 30.5f;
+            //    float solarEulerAngle = curve.Evaluate(value) * 360.0f;
+            //    Quaternion rot = Quaternion.Euler(new Vector3(solarEulerAngle, 0, 0));
+            //    _sun.rotation = rot;
+            //    Debug.Log(solarEulerAngle);
+            //}
 
             //private void FixedUpdate()
             //{
