@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox Shader Graph
-  m_Shader: {fileID: -6465566751694194690, guid: f97baa2ae27d7534bab1f220f10250b1,
+  m_Shader: {fileID: -6465566751694194690, guid: b9f66d1ee9375464494e87bdcc4ce796,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -69,7 +69,7 @@ Material:
     - _CloudsBlend: 1
     - _CloudsContrast: 1
     - _CloudsSize: -3.7
-    - _DayNightSlider: 1
+    - _DayNightSlider: 0
     - _HorizontalBlend: 11
     - _METALNESS: 0
     - _NadirBlend: 1
@@ -79,7 +79,7 @@ Material:
     - _SPECULAR_ROUGHNESS: 0
     - _StarBlend: 40
     - _StarSize: 300
-    - _StarVisible: 1
+    - _StarVisible: 0
     - _Star_Intensity: 3
     - _SunSize: 0.045
     - _ZenithBlend: 0.01
@@ -90,11 +90,13 @@ Material:
     - _GroundColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
     - _HorizontColor: {r: 1, g: 0.81539816, b: 0, a: 0}
     - _SPECULAR_COLOR: {r: 1, g: 1, b: 1, a: 0}
+    - _SkyColor: {r: 0.64627093, g: 0.8903413, b: 0.9716981, a: 0}
+    - _SkyNightColor: {r: 0, g: 0.050980367, b: 0.24705875, a: 0}
     - _Sky_Color: {r: 0.23113209, g: 0.64314795, b: 1, a: 1}
     - _Sky_Night_Color: {r: 0, g: 0, b: 0.1509434, a: 0}
     - _StarColor: {r: 1024, g: 542.1177, b: 152.5961, a: 0}
     - _SunColor: {r: 47.937256, g: 44.67451, b: 33.380394, a: 0}
-    - _SunDirection: {r: -0.7572304, g: -0.6427876, b: -0.11587222, a: 0}
+    - _SunDirection: {r: -0.3213938, g: -0.76604444, b: 0.5566705, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3251121769211347967
 MonoBehaviour:

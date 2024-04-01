@@ -53,7 +53,6 @@ namespace RealisticWeatherModeling
                 float solarEulerAngle = GetSolarEulerAngle(value);
                 Quaternion rot = Quaternion.Euler(new Vector3(solarEulerAngle, 0, 0));
                 sun.rotation = rot;
-                Debug.Log(solarEulerAngle);
             }
         }
     }
