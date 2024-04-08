@@ -1,20 +1,21 @@
-using RealisticWeatherModeling.Enum;
+using RealisticWeatherModeling.RealisticSkybox.Enum;
+using UnityEngine;
 
 namespace RealisticWeatherModeling
 {
-    namespace Manager
+    namespace Managers
     {
         public class SeasonManager : Manager
         {
+            [SerializeField] private TimeManager timeManager;
             public Season currentSeason;
             public void Simmulate()
             {
 
             }
-
             public override void Begin()
             {
-                base.Begin();
+                timeManager = GetComponent<TimeManager>();
             }
 
             public override void End()

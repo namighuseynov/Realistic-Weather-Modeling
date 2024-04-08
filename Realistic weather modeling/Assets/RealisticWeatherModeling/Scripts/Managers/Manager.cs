@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace RealisticWeatherModeling
 {
-    namespace Manager
+    namespace Managers
     {
         [System.Serializable]
         public class Manager : MonoBehaviour

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace RealisticWeatherModeling
@@ -16,6 +17,9 @@ namespace RealisticWeatherModeling
             private int _initialSecond = 0;
             private float _elapsedTime = 0;
 
+            public float ElapsedTime { get { return _elapsedTime; } }
+            public event Action OnDayLeft;
+
             public Clock(int hour, int minute, int second)
             {
                 _initialHour = hour;
@@ -30,7 +34,11 @@ namespace RealisticWeatherModeling
                 Seconds = Mathf.FloorToInt(_elapsedTime % 60);
                 Minute = Mathf.FloorToInt((_elapsedTime / 60) % 60);
                 Hour = Mathf.FloorToInt((_elapsedTime / 3600) % 24);
-
+                if (_elapsedTime > 86400)
+                {
+                    OnDayLeft?.Invoke();
+                    _elapsedTime = 0;
+                }
             }
 
             public void Update(int elapsedHour, int elapsedMinute, int elapsedSecond)

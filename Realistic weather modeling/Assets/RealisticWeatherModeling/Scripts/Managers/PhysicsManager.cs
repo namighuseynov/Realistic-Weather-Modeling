@@ -1,6 +1,6 @@
 namespace RealisticWeatherModeling
 {
-    namespace Manager
+    namespace Managers
     {
         public class PhysicsManager
         {

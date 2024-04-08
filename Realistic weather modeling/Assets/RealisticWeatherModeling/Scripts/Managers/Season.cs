@@ -1,13 +1,16 @@
 namespace RealisticWeatherModeling
 {
-    namespace Enum
-    {
-        public enum Season
+    namespace RealisticSkybox
+    { 
+        namespace Enum
         {
-            Spring = 0,
-            Summer,
-            Autumn,
-            Winter
+            public enum Season
+            {
+                Spring = 0,
+                Summer,
+                Autumn,
+                Winter
+            }
         }
     }
 }

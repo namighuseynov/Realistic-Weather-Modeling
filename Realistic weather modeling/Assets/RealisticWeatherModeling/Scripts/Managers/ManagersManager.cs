@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RealisticWeatherModeling
 {
-    namespace Manager
+    namespace Managers
     {
         public class ManagersManager : Manager
         {
